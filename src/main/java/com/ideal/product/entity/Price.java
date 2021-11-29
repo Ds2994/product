@@ -10,10 +10,10 @@ import java.sql.Timestamp;
 
 @Data
 @Entity
-@Table(name = "productprice")
+@Table(name = "price")
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductPrice implements Serializable {
+public class Price implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +32,8 @@ public class ProductPrice implements Serializable {
     private Product product;
 
     private double price;
+
+    private String code;
 
     @Column(name = "created_at")
     private Timestamp created;
